@@ -5,6 +5,7 @@
             <li>菜单1</li>
             <li>菜单2</li>
         </ul>
+        <span class ="toggleIcon"></span>
     </div>
 </template>
 
@@ -31,6 +32,7 @@
         padding: 16px;
         position:relative;
         z-index:10;
+        justify-content: center;
         > .logo {
             max-width: 6em;
             margin-right: auto;
@@ -39,9 +41,18 @@
             display: flex;
             white-space: nowrap;
             flex-wrap: nowrap;
+
             > li {
                 margin: 0 1em;
             }
         }
+         @media (max-width:500px){
+             > .menu{display:none;}
+             > .logo{margin:0 auto}
+         }
+
+    }
+    .toggleIcon{
+
     }
 </style>
