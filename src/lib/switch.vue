@@ -8,6 +8,7 @@
         name: "switch",
         setup(){
             const  checked = ref(false)
+            //点击可以切换
             const toggle=()=>{
                 checked.value = !checked.value
             }
@@ -35,12 +36,17 @@
         width: $h2;
         background:white;
         border-radius: $h2 / 2;
+        transition: left 250ms;
     }
     button.checked{
         background: blue;
     }
     button.checked > span{
         left: calc(100% - #{$h2} - 2px);
+    }
+    //去掉外围黑色的框框
+    button:focus{
+        outline:none;
     }
 
 </style>
