@@ -7,11 +7,11 @@
     import {ref} from 'vue'
     export default {
         name: "switch",
-        setup(props,context){
+        setup(props, context){
             // const  checked = ref(false)
             //点击可以切换
             const toggle=()=>{
-                context.emit('input',!props.value) //把当前props.value的值取反，通过input事件发给外面
+                context.emit('update:value',!props.value) //把当前props.value的值取反，通过input事件发给外面
               //   checked.value = !checked.value
             }
             return {toggle}
