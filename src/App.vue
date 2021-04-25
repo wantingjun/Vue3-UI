@@ -3,12 +3,12 @@
 </template>
 
 <script>
-import frank from './components/frank.vue'
+// import frank from './components/frank.vue'
 
 export default {
   name: 'App',
   components: {
-    frank
+
   }
 }
 </script>
