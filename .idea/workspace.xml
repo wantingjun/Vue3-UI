@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="7b646a8a-d531-452e-8e03-a3f091361f44" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/SwitchDemo.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SwitchDemo.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/switch.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/switch.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,6 +18,13 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="hiddenUrls">
+      <set>
+        <option value="git@github.com:wantingjun/Vue3-UI.git" />
+      </set>
+    </option>
   </component>
   <component name="ProjectId" id="1rV45OY0naM1a95q2g86P5utyb6" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -89,7 +94,14 @@
       <option name="project" value="LOCAL" />
       <updated>1619365463586</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="优化css">
+      <created>1619365669480</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1619365669480</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -110,17 +122,18 @@
     <MESSAGE value="可以接受value和input事件" />
     <MESSAGE value="使用v-model" />
     <MESSAGE value="switch css 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="switch css 2" />
+    <MESSAGE value="优化css" />
+    <option name="LAST_COMMIT_MESSAGE" value="优化css" />
   </component>
   <component name="WindowStateProjectService">
     <state x="458" y="202" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1619105291597">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="458" y="202" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1440.900/-380.-1440.2560.1440@0.0.1440.900" timestamp="1619105291597" />
-    <state x="307" y="49" key="CommitChangelistDialog2" timestamp="1619365463410">
+    <state x="307" y="49" key="CommitChangelistDialog2" timestamp="1619365965964">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="307" y="49" key="CommitChangelistDialog2/0.0.1440.900/-380.-1440.2560.1440@0.0.1440.900" timestamp="1619365463410" />
+    <state x="307" y="49" key="CommitChangelistDialog2/0.0.1440.900/-380.-1440.2560.1440@0.0.1440.900" timestamp="1619365965964" />
     <state x="142" y="0" key="SettingsEditor" timestamp="1619342873985">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
