@@ -53,6 +53,7 @@
     </div>
     <h1>示例5 loading</h1>
     <Button loading>loading</Button>
+    <Button >加载完毕</Button>
 
 
 </template>
