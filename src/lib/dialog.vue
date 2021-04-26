@@ -3,12 +3,12 @@
     <div class="gulu-dialog-overlay" @click="closeOnClickOverlay"></div>
     <div class="gulu-dialog-wrapper">
         <div class="gulu-dialog">
-        <header>标题
+        <header>
+            <slot name="title"></slot>
             <span @click="close" class="gulu-dialog-close"></span>
         </header>
         <main>
-            <p>1</p>
-            <p>2</p>
+            <slot name="content"></slot>
         </main>
         <footer>
             <Button @click="ok">ok</Button>
@@ -26,6 +26,10 @@
         name: "dialog",
         components:{Button},
         props:{
+            // title:{
+            //     type:String,
+            //     default:'提示'
+            // },
             visible:{
                 type:Boolean,
                 default: false
