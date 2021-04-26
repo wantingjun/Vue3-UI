@@ -19,7 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7b646a8a-d531-452e-8e03-a3f091361f44" name="Default Changelist" comment="">
+    <list default="true" id="7b646a8a-d531-452e-8e03-a3f091361f44" name="Default Changelist" comment="创建button组件">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -92,7 +92,8 @@
       <workItem from="1619340020334" duration="3663000" />
       <workItem from="1619399658992" duration="59000" />
       <workItem from="1619399869712" duration="955000" />
-      <workItem from="1619403225897" duration="11376000" />
+      <workItem from="1619403225897" duration="11823000" />
+      <workItem from="1619429185139" duration="707000" />
     </task>
     <task id="LOCAL-00001" summary="可以接受value和input事件">
       <created>1619363912677</created>

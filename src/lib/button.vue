@@ -3,7 +3,7 @@
             :class="classes"
             :disabled="disabled">
 
-        <span  v-if="loading"class="gulu-loadingIndicator"></span>
+        <span  v-if="loading" class="gulu-loadingIndicator"></span>
         <slot></slot>
     </button>
 
