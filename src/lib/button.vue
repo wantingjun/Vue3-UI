@@ -16,7 +16,7 @@
         }
     }
 </script>
-<style lang="scss" scoped>
+<style lang="scss" >
     $h: 32px;
     $border-color: #d9d9d9;
     $color: #333;
@@ -47,6 +47,7 @@
         &:focus {
             outline: none;
         }
+        /*针对firfox*/
         &::-moz-focus-inner {
             border: 0;
         }
