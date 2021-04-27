@@ -58,7 +58,7 @@
                 }
             }
             const cancel=()=>{
-                context.emit('cancel')
+              props.cancel && props.cancel() //可以缩写为props.cancel?.() 存在就执行
                 close()
 
             }
