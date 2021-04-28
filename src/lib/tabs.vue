@@ -15,7 +15,7 @@
 </template>
 <script lang="ts">
     import tab from './tab.vue'
-    import {ref,onMounted,onUpdated} from 'vue'
+    import {ref,onMounted,onUpdated,watchEffect} from 'vue'
     export default {
         name: "tabs",
         props:{
@@ -40,9 +40,9 @@
                 indicator.value.style.left = left + 'px'
             }
             onMounted( //挂载后显示,只在第一次渲染执行
-                x
-            )
+                x)
             onUpdated(x)
+           //watchEffect(x)
             //console.log({...context.slots.default()[0] })
             //console.log({...context.slots.default()[1] })
             const defaults = context.slots.default()
@@ -55,15 +55,15 @@
             const titles = defaults.map((tag)=>{
                     return tag.props.title //拿到tab的title属性
             })
-            const current = defaults.filter((tag)=>{ //current是当前选中的内容的title
-                return tag.props.title === props.selected
-            })[0]
+            // const current = defaults.filter((tag)=>{ //current是当前选中的内容的title
+            //     return tag.props.title === props.selected
+            // })[0]
             const select = (title)=>{
                 context.emit('update:selected',title)
             }
 
 
-            return {defaults,titles,current,select,indicator,container,selectedItem}
+            return {defaults,titles,select,indicator,container,selectedItem}
         }
 
     }
