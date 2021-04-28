@@ -1,6 +1,6 @@
 <template>
     <div class="gulu-tabs">
-        <div class="gulu-tabs-nav">
+        <div class="gulu-tabs-nav" ref="container">
             <div class="gulu-tabs-nav-item" v-for="(t,index) in titles"
                  :ref="el=>{if(el) navItems[index]=el}"
                  @click="select(t)"
@@ -15,7 +15,7 @@
 </template>
 <script lang="ts">
     import tab from './tab.vue'
-    import {ref,onMounted} from 'vue'
+    import {ref,onMounted,onUpdated} from 'vue'
     export default {
         name: "tabs",
         props:{
@@ -27,14 +27,23 @@
         setup(props,context){
             const navItems = ref<HTMLDivElement[]>([])
             const indicator = ref<HTMLDivElement>(null)
-            onMounted(()=>{ //挂载后显示
+            const container = ref<HTMLDivElement>(null)
+            const x=()=>{
                 console.log({...navItems.value})
                 const divs = navItems.value
-                const result = divs.filter(div=>div.classList.contains('selected'))[0] //filter返回数组，所以获取[0]
+                const result = divs.filter(div=>div.classList.contains('selected'))[0] //被选中的tab filter返回数组，所以获取[0]
                 console.log(result)
                 const {width} = result.getBoundingClientRect()
                 indicator.value.style.width = width + 'px'
-            })
+                const {left:left1} = container.value.getBoundingClientRect() //获取container的left
+                const {left:left2} = result.getBoundingClientRect() //result 的left
+                const left = left2 - left1
+                indicator.value.style.left = left + 'px'
+            }
+            onMounted( //挂载后显示,只在第一次渲染执行
+                x
+            )
+            onUpdated(x)
             //console.log({...context.slots.default()[0] })
             //console.log({...context.slots.default()[1] })
             const defaults = context.slots.default()
@@ -53,7 +62,9 @@
             const select = (title)=>{
                 context.emit('update:selected',title)
             }
-            return {defaults,titles,current,select,navItems,indicator}
+
+
+            return {defaults,titles,current,select,navItems,indicator,container}
         }
 
     }
@@ -87,6 +98,7 @@
                 left: 0;
                 bottom: -1px;
                 width: 100px;
+                transition:all 250ms;
             }
         }
         &-content {
