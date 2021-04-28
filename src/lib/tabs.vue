@@ -1,10 +1,12 @@
 <template>
     <div class="gulu-tabs">
         <div class="gulu-tabs-nav">
-            <div class="gulu-tabs-nav-item" v-for="(t,index) in titles" @click="select(t)" :class="{selected: t=== selected}" :key="index">{{t}}</div>
-            <div class="gulu-tabs-nav-indicator">
-
-            </div>
+            <div class="gulu-tabs-nav-item" v-for="(t,index) in titles"
+                 :ref="el=>{if(el) navItems[index]=el}"
+                 @click="select(t)"
+                 :class="{selected: t=== selected}" :key="index">{{t}}</div>
+            <div class="gulu-tabs-nav-indicator"
+                 ref="indicator" ></div>
         </div>
         <div class="gulu-tabs-content">
             <component class="gulu-tabs-content-item" :class="{selected: c.props.title === selected }" v-for="c in defaults" :is="c" />
@@ -13,6 +15,7 @@
 </template>
 <script lang="ts">
     import tab from './tab.vue'
+    import {ref,onMounted} from 'vue'
     export default {
         name: "tabs",
         props:{
@@ -22,6 +25,16 @@
         },
 
         setup(props,context){
+            const navItems = ref<HTMLDivElement[]>([])
+            const indicator = ref<HTMLDivElement>(null)
+            onMounted(()=>{ //挂载后显示
+                console.log({...navItems.value})
+                const divs = navItems.value
+                const result = divs.filter(div=>div.classList.contains('selected'))[0] //filter返回数组，所以获取[0]
+                console.log(result)
+                const {width} = result.getBoundingClientRect()
+                indicator.value.style.width = width + 'px'
+            })
             //console.log({...context.slots.default()[0] })
             //console.log({...context.slots.default()[1] })
             const defaults = context.slots.default()
@@ -40,7 +53,7 @@
             const select = (title)=>{
                 context.emit('update:selected',title)
             }
-            return {defaults,titles,current,select}
+            return {defaults,titles,current,select,navItems,indicator}
         }
 
     }
