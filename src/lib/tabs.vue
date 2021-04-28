@@ -1,16 +1,13 @@
 <template>
     <div class="gulu-tabs">
         <div class="gulu-tabs-nav">
-            <div class="gulu-tabs-nav-item"
-                 :class="{selected: t === selected}" @click="select(t)"
-                 v-for="(t,index) in titles" :key="index">{{t}}</div>
+            <div class="gulu-tabs-nav-item" v-for="(t,index) in titles" @click="select(t)" :class="{selected: t=== selected}" :key="index">{{t}}</div>
         </div>
         <div class="gulu-tabs-content">
-            <component class="gulu-tabs-content-item" :is="current"/>
+            <component class="gulu-tabs-content-item" :class="{selected: c.props.title === selected }" v-for="c in defaults" :is="c" />
         </div>
     </div>
 </template>
-
 <script lang="ts">
     import tab from './tab.vue'
     export default {
@@ -34,11 +31,9 @@
             const titles = defaults.map((tag)=>{
                     return tag.props.title //拿到tab的title属性
             })
-            const current = computed(()=>{ //current要实时计算
-                defaults.filter((tag)=>{ //current是当前选中的内容的title
-                    return tag.props.title === props.selected
-                })[0]
-            })
+            const current = defaults.filter((tag)=>{ //current是当前选中的内容的title
+                return tag.props.title === props.selected
+            })[0]
             const select = (title)=>{
                 context.emit('update:selected',title)
             }
@@ -71,6 +66,13 @@
         }
         &-content {
             padding: 8px 0;
+
+            &-item{
+                display:none;
+                &.selected {
+                    display: block;
+                }
+            }
         }
     }
 </style>
