@@ -6,10 +6,13 @@
             </svg>
         </div>
         <ul class="menu">
-            <li>菜单1</li>
-            <li>菜单2</li>
+            <li>
+                <router-link to="/doc">文档</router-link>
+            </li>
         </ul>
-        <span class ="toggleIcon" @click="toggleMenu"></span>
+            <svg v-if="toggleMenuVisible" class ="toggleIcon" @click="toggleMenu">
+                <use xlink:href="#iconmenu" ></use>
+            </svg>
     </div>
 </template>
 
@@ -25,6 +28,12 @@
                 console.log('topnav get menuVisible :'+menuVisible.value)
             }
             return {toggleMenu}
+        },
+        props:{
+            toggleMenuVisible:{
+                type:Boolean,
+                default:false
+            }
         }
     }
 </script>
@@ -61,9 +70,8 @@
             }
         }
         > .toggleIcon{
-            width:24px;
-            height:24px;
-            background: red;
+            width:32px;
+            height:32px;
             position:absolute;
             left:16px;
             top:50%;
