@@ -1,10 +1,14 @@
 <template>
     <div class="topnav">
+
         <div class="logo" >
+            <router-link to="/">
             <svg class="icon" >
                 <use xlink:href="#icon-pikachu"></use>
             </svg>
+            </router-link>
         </div>
+
         <ul class="menu">
             <li>
                 <router-link to="/doc">文档</router-link>
@@ -55,7 +59,7 @@
         > .logo {
             max-width: 6em;
             margin-right: auto;
-            >svg{
+            svg{
                 height:52px;
                 width:52px;
             }
