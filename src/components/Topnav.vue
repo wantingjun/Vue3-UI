@@ -1,6 +1,10 @@
 <template>
     <div class="topnav">
-        <div class="logo" >LOGO</div>
+        <div class="logo" >
+            <svg class="icon" >
+                <use xlink:href="#icon-pikachu"></use>
+            </svg>
+        </div>
         <ul class="menu">
             <li>菜单1</li>
             <li>菜单2</li>
@@ -26,8 +30,10 @@
 </script>
 
 <style lang="scss" scoped>
-    .topnav {
+    $color:#28d1c9;
 
+    .topnav {
+        color: $color;
         display: flex;
         padding: 16px;
         position:fixed;
@@ -40,6 +46,10 @@
         > .logo {
             max-width: 6em;
             margin-right: auto;
+            >svg{
+                height:52px;
+                width:52px;
+            }
         }
         > .menu {
             display: flex;
