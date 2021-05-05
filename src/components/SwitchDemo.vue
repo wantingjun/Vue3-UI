@@ -4,7 +4,7 @@
         <div class="demo">
             <h2>常规用法</h2>
             <div class="demo-component">
-                <switch1Demo>111</switch1Demo>
+                <component :is="switch1Demo" />
             </div>
             <div class="demo-actions">
                 <Button>查看代码</Button>
@@ -17,7 +17,7 @@
             <h2>支持 disabled </h2>
 
             <div class="demo-component">
-                <switch2Demo></switch2Demo>
+                <component :is="switch2Demo" />
             </div>
             <div class="demo-actions">
                 <Button>查看代码</Button>
@@ -39,10 +39,7 @@
     } from 'vue'
     export default {
         components: {
-            Switch,
             Button,
-            switch1Demo,
-            switch2Demo
         },
         setup() {
             const bool = ref(false)
