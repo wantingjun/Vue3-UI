@@ -19,7 +19,7 @@
 
 <script lang="ts">
 
-    import Button from "../lib/Button.vue";
+    import Button from "../lib/button.vue";
 
     export default {
 

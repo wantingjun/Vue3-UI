@@ -17,8 +17,8 @@
 </template>
 
 <script lang="ts">
-    import Dialog from '../lib/Dialog.vue'
-    import Button from '../lib/Button.vue'
+    import Dialog from '../lib/dialog.vue'
+    import Button from '../lib/button.vue'
     import {
         ref
     } from 'vue'
