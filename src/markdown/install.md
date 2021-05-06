@@ -11,4 +11,4 @@ yarn add king-ui
 
 
 ## 下一节：
-<a href="#/doc/get-started">开始使用</a>
+<a href="#/doc/start">开始使用</a>

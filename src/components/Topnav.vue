@@ -53,7 +53,7 @@
         top:0;
         left:0;
         width:100%;
-        z-index:10;
+        z-index:20;
         justify-content: center;
         align-items: center;
         > .logo {
@@ -84,7 +84,7 @@
         }
          @media (max-width:500px){
              > .menu{display:none;}
-             > .logo{margin:0 auto}
+             > .logo{margin:0 auto;position: static}
              > .toggleIcon{display:inline-block}
          }
 
