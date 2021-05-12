@@ -48,7 +48,8 @@
             const defaults = context.slots.default()
           //  console.log(defaults[0].type === tab) //检查组件类型
             defaults.forEach((tag)=>{
-                if(tag.type !== tab){ //如果自组件的类型不是tab，则报错
+                //@ts-ignore
+                if(tag.type.name !== tab.name){ //如果自组件的类型不是tab，则报错
                     throw new Error('tabs必须是tab') //如果这里报错，下面不会执行
                 }
             })
