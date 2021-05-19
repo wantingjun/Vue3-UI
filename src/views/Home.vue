@@ -3,7 +3,7 @@
     <div class="topnavAndBanner">
         <Topnav></Topnav>
         <div class="banner">
-            <h1>咕噜ui</h1>
+            <h1>pikachu-ui</h1>
             <h2>一个厉害的ui框架</h2>
             <p class="actions">
                 <a>Github</a>

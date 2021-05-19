@@ -3,7 +3,6 @@
 </template>
 
 <script lang="ts">
-// import frank from './components/frank.vue'
 import {ref,provide} from 'vue'
 import {router} from './router.ts'
 
@@ -17,7 +16,6 @@ export default {
           if(width <= 500){
               menuVisible.value = false;
           }
-
       })
   }
 

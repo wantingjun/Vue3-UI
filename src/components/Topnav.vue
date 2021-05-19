@@ -26,10 +26,10 @@
         name: "Topnav",
         setup(){
            const menuVisible = inject<Ref<boolean>>('xxx') //get
-            console.log('topnav get menuVisible :'+menuVisible.value)
+          //  console.log('topnav get menuVisible :'+menuVisible.value)
             const toggleMenu =()=>{
                menuVisible.value = !menuVisible.value
-                console.log('topnav get menuVisible :'+menuVisible.value)
+               // console.log('topnav get menuVisible :'+menuVisible.value)
             }
             return {toggleMenu}
         },

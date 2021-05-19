@@ -47,7 +47,6 @@
         components:{Topnav},
         setup(){
             const menuVisible = inject<Ref<boolean>>('xxx') //get
-            console.log('topnav get menuVisible'+menuVisible.value)
             return {menuVisible}
         }
     }
