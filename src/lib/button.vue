@@ -1,9 +1,9 @@
 <template>
-    <button class="gulu-button"
+    <button class="wanwan-button"
             :class="classes"
             :disabled="disabled">
 
-        <span  v-if="loading" class="gulu-loadingIndicator"></span>
+        <span  v-if="loading" class="wanwan-loadingIndicator"></span>
         <slot></slot>
     </button>
 
@@ -39,9 +39,9 @@
             const {theme,size,level} = props
             const classes = computed(()=>{
                 return {
-                    [`gulu-theme-${theme}`]: theme,
-                    [`gulu-size-${size}`]: size,
-                    [`gulu-level-${level}`]: level,
+                    [`wanwan-theme-${theme}`]: theme,
+                    [`wanwan-size-${size}`]: size,
+                    [`wanwan-level-${level}`]: level,
                 }
             })
             return {classes}
@@ -52,11 +52,11 @@
     $h: 32px;
     $border-color: #d9d9d9;
     $color: #333;
-    $blue: #40a9ff;
+    $blue: lightblue;
     $radius: 4px;
     $red: red;
     $grey: grey;
-    .gulu-button {
+    .wanwan-button {
         box-sizing: border-box;
         height: $h;
         padding: 0 12px;
@@ -86,7 +86,7 @@
         &::-moz-focus-inner {
             border: 0;
         }
-        &.gulu-theme-link{
+        &.wanwan-theme-link{
             border-color: transparent;
             box-shadow: none;
             color: $blue;
@@ -95,7 +95,7 @@
                 color: lighten($blue, 10%);
             }
         }
-        &.gulu-theme-text{
+        &.wanwan-theme-text{
             border-color: transparent;
             box-shadow: none;
             color: inherit;
@@ -104,19 +104,19 @@
                 background: darken(white, 5%);;
             }
         }
-        &.gulu-size-big {
+        &.wanwan-size-big {
             font-size: 24px;
             height: 48px;
             padding: 0 16px;
         }
-        &.gulu-size-small {
+        &.wanwan-size-small {
             font-size: 12px;
             height: 20px;
             padding: 0 4px;
         }
         /*level-css*/
-        &.gulu-theme-button {
-            &.gulu-level-main {
+        &.wanwan-theme-button {
+            &.wanwan-level-main {
                 background: $blue;
                 color: white;
                 border-color: $blue;
@@ -126,7 +126,7 @@
                     border-color: darken($blue, 10%);
                 }
             }
-            &.gulu-level-danger {
+            &.wanwan-level-danger {
                 background: $red;
                 border-color: $red;
                 color: white;
@@ -137,8 +137,8 @@
                 }
             }
         }
-        &.gulu-theme-link {
-            &.gulu-level-danger {
+        &.wanwan-theme-link {
+            &.wanwan-level-danger {
                 color: $red;
                 &:hover,
                 &:focus {
@@ -146,15 +146,15 @@
                 }
             }
         }
-        &.gulu-theme-text {
-            &.gulu-level-main {
+        &.wanwan-theme-text {
+            &.wanwan-level-main {
                 color: $blue;
                 &:hover,
                 &:focus {
                     color: darken($blue, 10%);
                 }
             }
-            &.gulu-level-danger {
+            &.wanwan-level-danger {
                 color: $red;
                 &:hover,
                 &:focus {
@@ -163,7 +163,7 @@
             }
         }
         /*disabled button*/
-        &.gulu-theme-button {
+        &.wanwan-theme-button {
             &[disabled] {
                 cursor: not-allowed;
                 color: $grey;
@@ -172,14 +172,14 @@
                 }
             }
         }
-        &.gulu-theme-link, &.gulu-theme-text {
+        &.wanwan-theme-link, &.wanwan-theme-text {
             &[disabled] {
                 cursor: not-allowed;
                 color: $grey;
             }
         }
         /*loading*/
-        > .gulu-loadingIndicator{
+        > .wanwan-loadingIndicator{
             width: 14px;
             height: 14px;
             display: inline-block;
@@ -188,10 +188,10 @@
             border-color: $blue $blue $blue transparent;
             border-style: solid;
             border-width: 2px;
-            animation: gulu-spin 1s infinite linear;
+            animation: wanwan-spin 1s infinite linear;
         }
     }
-    @keyframes gulu-spin {
+    @keyframes wanwan-spin {
         0%{transform: rotate(0deg)}
         100%{transform: rotate(360deg)}
 

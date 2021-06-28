@@ -3,8 +3,8 @@
 </demo>
 <template>
     <Tabs v-model:selected="x">
-        <Tab title="导航1">内容1</Tab>
-        <Tab title="导航2">内容2</Tab>
+        <Tab title="导航1">导航1内容</Tab>
+        <Tab title="导航2">导航2内容</Tab>
     </Tabs>
 </template>
 

@@ -1,5 +1,5 @@
 
-import './lib/gulu.scss'
+import './lib/wanwan.scss'
 import './index.scss'
 
 import { createApp } from 'vue'

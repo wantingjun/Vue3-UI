@@ -3,11 +3,11 @@
 </demo>
 <template>
     <div>
-        <Button @click="toggle">打开对话框</Button>
+        <Button @click="toggle">点击打开对话框</Button>
         <Dialog v-model:visible="x" :closeOnClickOverlay="false" :ok="f1" :cancel="f2">
             <template v-slot:content>
-                <strong>hi</strong>
-                <div>hi2</div>
+                <strong>加粗的字体</strong>
+                <div>正文</div>
             </template>
             <template v-slot:title>
                 <strong>加粗的标题</strong>

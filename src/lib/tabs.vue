@@ -1,15 +1,15 @@
 <template>
-    <div class="gulu-tabs">
-        <div class="gulu-tabs-nav" ref="container">
-            <div class="gulu-tabs-nav-item" v-for="(t,index) in titles"
+    <div class="wanwan-tabs">
+        <div class="wanwan-tabs-nav" ref="container">
+            <div class="wanwan-tabs-nav-item" v-for="(t,index) in titles"
                  :ref="el=>{if(t === selected) selectedItem = el}"
                  @click="select(t)"
                  :class="{selected: t=== selected}" :key="index">{{t}}</div>
-            <div class="gulu-tabs-nav-indicator"
+            <div class="wanwan-tabs-nav-indicator"
                  ref="indicator" ></div>
         </div>
-        <div class="gulu-tabs-content">
-            <component class="gulu-tabs-content-item" :class="{selected: c.props.title === selected }" v-for="c in defaults" :is="c" />
+        <div class="wanwan-tabs-content">
+            <component class="wanwan-tabs-content-item" :class="{selected: c.props.title === selected }" v-for="c in defaults" :is="c" />
         </div>
     </div>
 </template>
@@ -71,10 +71,10 @@
 </script>
 
 <style lang="scss">
-    $blue: #40a9ff;
+    $blue: lightblue;
     $color: #333;
     $border-color: #d9d9d9;
-    .gulu-tabs {
+    .wanwan-tabs {
         &-nav {
             display: flex;
             color: $color;

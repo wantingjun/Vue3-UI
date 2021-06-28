@@ -3,8 +3,8 @@
     <div class="topnavAndBanner">
         <Topnav></Topnav>
         <div class="banner">
-            <h1>pikachu-ui</h1>
-            <h2>一个厉害的ui框架</h2>
+            <h1>wanwanUI</h1>
+            <h2>一个优秀的女孩子写的UI库</h2>
             <p class="actions">
                 <a>Github</a>
                 <router-link to="/doc">开始</router-link>
@@ -18,14 +18,14 @@
                         <use xlink:href="#iconvue"></use>
                     </svg>
                     <h3>基于 Vue 3</h3>
-                    <p>骄傲地使用了 Vue 3 Composition API</p>
+                    <p>尝试学习使用 Vue 3 Composition API</p>
                 </li>
                 <li>
                     <svg>
                         <use xlink:href="#iconts"></use>
                     </svg>
                     <h3>基于 TypeScript </h3>
-                    <p>源代码采用 TypeScript 书写（非严格检查）</p>
+                    <p>尝试采用 TypeScript 书写</p>
                 </li>
                 <li>
                     <svg>

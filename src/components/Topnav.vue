@@ -4,7 +4,7 @@
         <div class="logo" >
             <router-link to="/">
             <svg class="icon" >
-                <use xlink:href="#icon-pikachu"></use>
+                <use xlink:href="#iconlogo"></use>
             </svg>
             </router-link>
         </div>
@@ -43,7 +43,7 @@
 </script>
 
 <style lang="scss" scoped>
-    $color:#28d1c9;
+    $color:black;
 
     .topnav {
         color: $color;
