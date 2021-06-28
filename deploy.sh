@@ -8,4 +8,4 @@ git branch -M main &&
 git remote add origin git@github.com:wantingjun/UI-website.git &&
 git push -f -u origin main &&
 cd ..
-echo https://wantingjun.github.io/UI-website/ &&
+echo https://wantingjun.github.io/UI-website/
