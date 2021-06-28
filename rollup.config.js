@@ -10,8 +10,8 @@ export default {
         globals: {
             vue: 'Vue'
         },
-        name: 'Gulu',
-        file: 'dist/lib/gulu.js',
+        name: 'wanwanui',
+        file: 'dist/lib/wanwanui.js',
         format: 'umd',
         plugins: [terser()]
     },
